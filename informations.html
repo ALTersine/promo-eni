@@ -4,9 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'informations - Promo-eni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="container-fluid">
+        <section id="page-header" class="row">
+        <img src="assets/logo.png" alt="Logo de l'école ENI" id="logoEni" class="img-thumbnail  col-md-3 col-xl-2 d-none d-sm-none d-md-block">
+        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap">Promo D2WM 09-2025 <small class="text-body-secondary">(EDWM2509B)</small></h1>
+
+        <span id="navigationAffichage" class="d-flex flex-row align-items-center justify-content- flex-nowrap col">
+        <div class="column">
+            <nav id="largeMediaNavigate" class="navbar">
+            <div class="container-fluid">
+                <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a href="index.html" id="homeNavigate" class="nav-link" aria-current="page">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="preferences.html" id="prefNavigate" class="nav-link">Préférences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="carte.html" id="mapNavigate" class="nav-link">Carte</a>
+                </li>
+                <li class="nav-item">
+                    <a href="informations.html" id="infoNavigate" class="nav-link active">Informations</a>
+                </li>
+                </ul>
+            </div>
+            </nav>
+    </section>
+
+    <section id="informationsGenerales" class="container-fluid">
+        <span id="infoTitre">
+        <h2 id="info" class="display-2">* INFORMATIONS GENERALES *</h2>
+
+        <p>Formation du <strong>29/09/2025</strong> au <strong>22/05/2026</strong></p>
+        <p>Nombre d'apprenants : <strong id="nbApprenants"></strong></p>
+        </span>
+
+        <div id="infoDescLiens" class="row">
+            <span id="desc" class="blocDescliens col-lg-12 col-xl-6">
+                <h3 id="description" class="display-3">Description</h3>
+
+                <div id="blocDesc" >
+                    <h6 class="titreDescLiens">Par ce qu'une image vaut 1 000 mots, découvrez la vidéo de présentation de la formation:</h6>
+
+                    <iframe src="https://www.youtube.com/embed/ia7hagQP3X4?si=y-DwrvgnS2HPXlQH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen alt="vidéo présentation de la formation" class="videoDesc"></iframe>
+
+                </div>
+
+            </span>
+
+            <span id="liens" class="blocDescliens col-lg-12 col-xl-6">
+                <h3 id="liensUtiles" class="display-3" style="margin-left: 5%;">Liens utiles</h3>
+
+                <div id="blocliens">
+                    <h6 class="titreDescLiens">Le développement de ce site a été réalisé avec les liens pratiques ci-dessous (à utiliser sans hésitation) :</h6>
+
+                    <ul>
+                        <li>
+                            <a href="https://devdocs.io" target="_blank" rel="noopener noreferrer">Documentation en ligne de toute techno ou presque</a>
+                        </li>
+                        <li>
+                            <a href="https://open.spotify.com/playlist/7ioOUhqClZIDFibWfrE3CA?si=270f3f15bf8f4988" target="_blank" rel="noopener noreferrer">De la bonne musique pour réussir à centrer ses éléments dans une div</a>
+                        </li>
+                        <li>
+                            <a href="https://getbootstrap.com/docs/5.3/getting-started/introduction" target="_blank" rel="noopener noreferrer">La doc Bootstrap pour une site simple et élégant</a>
+                        </li>
+                        <li>
+                            <a href="https://releases.jquery.com" target="_blank" rel="noopener noreferrer">Lien direct vers le CDN de JQuery pour des animations front en une ligne... ou presque</a>
+                        </li>
+                        <li><em>Et beaucoup de café, mais il n'y a pas de lien en ligne pour cela (désolée)</em></li>
+                        
+                    </ul>
+
+                </div>
+
+            </span>
+
+        </div>
+    </section>
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </html>

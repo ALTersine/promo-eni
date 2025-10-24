@@ -4,9 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page d'accueil - Promo-eni</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="container-fluid">
+    <section id="page-header" class="row">
+        <img src="assets/logo.png" alt="Logo de l'école ENI" id="logoEni" class="img-thumbnail  col-md-3 col-xl-2 d-none d-sm-none d-md-block">
+        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap">Promo D2WM 09-2025 <small class="text-body-secondary">(EDWM2509B)</small></h1>
+
+        <span id="navigationAffichage" class="d-flex flex-row align-items-center justify-content- flex-nowrap col">
+        <!-- Menu en ligne -->
+        <div class="column">
+            <nav id="largeMediaNavigate" class="navbar">
+                <!--Gestion des menus responsive
+                <div id="navbarToggleExternalContent" class="collapse">-->
+            <div class="container-fluid">
+                <ul class="nav nav-underline">
+                <li class="nav-item">
+                    <a href="index.html" id="homeNavigate" class="nav-link active" aria-current="page">Accueil</a>
+                </li>
+                <li class="nav-item">
+                    <a href="preferences.html" id="prefNavigate" class="nav-link">Préférences</a>
+                </li>
+                <li class="nav-item">
+                    <a href="carte.html" id="mapNavigate" class="nav-link">Carte</a>
+                </li>
+                <li class="nav-item">
+                    <a href="informations.html" id="infoNavigate" class="nav-link">Informations</a>
+                </li>
+                </ul>
+            </div>
+                <!-- </div> -->
+            </nav>
+            <!-- Menu burger -->
+            <!-- <nav class="navbar" id="smallMediaNavigate">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            </nav> -->
+        
+        <fieldset id="affichageListeCartes">
+            <legend class="d-flex justify-content-center align-items-center">Type affichage</legend>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="listeCartes" id="liste" class="form-check-input" checked>
+                    <label for="liste" class="form-check-label">Liste</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input type="radio" name="listeCartes" id="cartes" class="form-check-input">
+                    <label for="cartes" class="form-check-label">Cartes</label>
+                </div>
+        </fieldset>
+        </div>
+        </span>
+    </section>
+
+    <section id="tableauApprenants" class="column">
+        <h2 id="titreTableau" class="display-2" style="margin-top: 5%; margin-bottom: 5%;">Liste des apprenants</h2>
+
+        <table class="table table-striped-columns table-hover" style="padding-right: 5%;">
+            <thead>
+                <tr>
+                    <th id="nom">Nom</th>
+                    <th id="prenom">Prénom</th>
+                    <th id="ville">Ville</th>
+                    <th id="detail"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr id="1">
+                    <td id="nom_1"></td>
+                    <td id="prenom_1"></td>
+                    <td id="ville_1"></td>
+                    <td id="detail_1">
+                        <button type="button" class="btn btn-outline-info" id="modal_1" data-bs-toggle="modal" data-bs-target="#detailModal">Détail</button>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+
+        <!-- Le modal du lien detail (ctr-v de bootstrap) --> 
+        <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+            </div>
+            </div>
+        </div>
+        </div>
+
+    </section>
     
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js" defer></script>
 </html>

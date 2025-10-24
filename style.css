@@ -1,0 +1,31 @@
+/*container-fluid mt-3 text-light p-3 mb-2 bg-light-subtle text-light-emphasis d-flex flex-column min-vh-100*/
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+}
+
+#affichageListeCartes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: auto;
+    width: fit-content;
+}
+
+#affichageListeCartes legend {
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+
+
+/* @media screen only(width>=768px) {
+    #smallMediaNavigate{
+        display: none;
+    }
+} */

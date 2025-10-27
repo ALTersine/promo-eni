@@ -13,7 +13,7 @@ h2{
     margin-bottom: 5%;
 }
 
-#infoTitre{
+.infos{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -41,10 +41,16 @@ h2{
 }
 
 .videoDesc{
+    display: flex; 
+    justify-content: center;
+}
+
+.videoIframe{
     max-width: 560px;
     max-height: 315px;
     margin-bottom: 10%;
 }
+
 
 #blocliens{
     border: 1px solid rgba(194, 194, 194, 0.404);
@@ -64,4 +70,9 @@ h2{
 #blocliens li {
     list-style-type: none;
     padding-bottom: 3%;
+}
+
+button a{
+    text-decoration: none;
+    color:inherit
 }

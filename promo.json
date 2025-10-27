@@ -1,0 +1,184 @@
+{
+  "apprenants": [
+    {
+      "id": 1,
+      "nom": "Dupont",
+      "prenom": "Léa",
+      "ville": "Nantes",
+      "anecdotes": [
+        "A couru son premier semi-marathon en 2024.",
+        "Adore coder en écoutant du jazz."
+      ],
+      "avatar": "lea_dupont.png",
+      "coordonnees": {
+        "latitude": 47.2184,
+        "longitude": -1.5536
+      }
+    },
+    {
+      "id": 2,
+      "nom": "Martin",
+      "prenom": "Lucas",
+      "ville": "La Rochelle",
+      "anecdotes": [
+        "Collectionne les vinyles des années 80.",
+        "Est bénévole dans un club de voile."
+      ],
+      "avatar": "lucas_martin.png",
+      "coordonnees": {
+        "latitude": 46.1603,
+        "longitude": -1.1511
+      }
+    },
+    {
+      "id": 3,
+      "nom": "Bernard",
+      "prenom": "Camille",
+      "ville": "Poitiers",
+      "anecdotes": [
+        "Peint à l’aquarelle pendant son temps libre.",
+        "A un chat nommé Pixel."
+      ],
+      "avatar": "camille_bernard.png",
+      "coordonnees": {
+        "latitude": 46.5802,
+        "longitude": 0.3404
+      }
+    },
+    {
+      "id": 4,
+      "nom": "Petit",
+      "prenom": "Mathis",
+      "ville": "Tours",
+      "anecdotes": [
+        "A déjà construit un PC gamer de A à Z.",
+        "Fan de randonnée dans les Alpes."
+      ],
+      "avatar": "mathis_petit.png",
+      "coordonnees": {
+        "latitude": 47.3941,
+        "longitude": 0.6848
+      }
+    },
+    {
+      "id": 5,
+      "nom": "Robert",
+      "prenom": "Emma",
+      "ville": "Angers",
+      "anecdotes": [
+        "Fait partie d’une troupe de théâtre amateur.",
+        "Adore les escape games."
+      ],
+      "avatar": "emma_robert.png",
+      "coordonnees": {
+        "latitude": 47.4784,
+        "longitude": -0.5632
+      }
+    },
+    {
+      "id": 6,
+      "nom": "Durand",
+      "prenom": "Noa",
+      "ville": "Niort",
+      "anecdotes": [
+        "Est passionné par la photographie argentique.",
+        "A déjà voyagé seul en Islande."
+      ],
+      "avatar": "noa_durand.png",
+      "coordonnees": {
+        "latitude": 46.3237,
+        "longitude": -0.4588
+      }
+    },
+    {
+      "id": 7,
+      "nom": "Moreau",
+      "prenom": "Chloé",
+      "ville": "Limoges",
+      "anecdotes": [
+        "A participé à un hackathon étudiant.",
+        "A un faible pour les romans de science-fiction."
+      ],
+      "avatar": "chloe_moreau.png",
+      "coordonnees": {
+        "latitude": 45.8336,
+        "longitude": 1.2611
+      }
+    },
+    {
+      "id": 8,
+      "nom": "Laurent",
+      "prenom": "Enzo",
+      "ville": "Saintes",
+      "anecdotes": [
+        "Joue de la guitare depuis 10 ans.",
+        "A un chien qui s'appelle Django."
+      ],
+      "avatar": "enzo_laurent.png",
+      "coordonnees": {
+        "latitude": 45.7496,
+        "longitude": -0.6336
+      }
+    },
+    {
+      "id": 9,
+      "nom": "Simon",
+      "prenom": "Jade",
+      "ville": "Cholet",
+      "anecdotes": [
+        "A fait un stage dans une start-up parisienne.",
+        "Est passionnée par le motion design."
+      ],
+      "avatar": "jade_simon.png",
+      "coordonnees": {
+        "latitude": 47.0639,
+        "longitude": -0.8795
+      }
+    },
+    {
+      "id": 10,
+      "nom": "Michel",
+      "prenom": "Tom",
+      "ville": "Vannes",
+      "anecdotes": [
+        "A construit un site web pour un club de sport local.",
+        "A un faible pour la cuisine italienne."
+      ],
+      "avatar": "tom_michel.png",
+      "coordonnees": {
+        "latitude": 47.6582,
+        "longitude": -2.7608
+      }
+    },
+    {
+      "id": 11,
+      "nom": "Garcia",
+      "prenom": "Mila",
+      "ville": "Rochefort",
+      "anecdotes": [
+        "Pratique la danse contemporaine depuis 8 ans.",
+        "A participé à un projet open source."
+      ],
+      "avatar": "mila_garcia.png",
+      "coordonnees": {
+        "latitude": 45.942,
+        "longitude": -0.9616
+      }
+    },
+    {
+      "id": 12,
+      "nom": "Faure",
+      "prenom": "Nathan",
+      "ville": "Cognac",
+      "anecdotes": [
+        "A déjà réparé un drone tout seul.",
+        "Aime apprendre de nouvelles langues."
+      ],
+      "avatar": "nathan_faure.png",
+      "coordonnees": {
+        "latitude": 45.695,
+        "longitude": -0.3263
+      }
+    }
+  ]
+}

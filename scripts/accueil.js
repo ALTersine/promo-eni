@@ -1,11 +1,7 @@
-import { loadPrefAffichage } from "./scripts.js";
+import { loadPrefAffichage } from "./prefe.js";
 import { promo, listeApprenant, cartesAprrenant } from "./apprenants.js";
 
 init();
-
-$('#detailModal').click('shown.bs.modal', () => {
-  $('#modal_1').focus()
-})
 
 function affichageAccueil(){
   const affichage = $('input[name="listeCartes"]:checked').attr('id');
@@ -18,7 +14,6 @@ function affichageAccueil(){
         }
     });
 }
-
 
 function majPrefe(){
   $('#liste').change(()=>{

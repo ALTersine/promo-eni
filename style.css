@@ -76,3 +76,27 @@ button a{
     text-decoration: none;
     color:inherit
 }
+
+#carteLocalisation{
+    height: 80vh;
+    width: 80%;
+    margin-bottom: 5%;
+}
+
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.leaflet-popup-content-wrapper{
+    text-align: center;
+}
+
+#anecdoteModal{
+    border: 1px solid rgba(133, 133, 133, 0.315);
+    border-radius: 7px;
+    height: 10vh;
+    text-align: center;
+}

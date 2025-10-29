@@ -16,6 +16,7 @@ function init(){
 $('#savePref').click(()=>{
     saveTheme();
     saveAffichage()
+    saveAffichage()
 
     alert(`Merci, votre thème a été sauvegardé en ${saveTheme()} et la liste des apprenants en affichage de type ${saveAffichage() }`)
 
@@ -36,6 +37,36 @@ function saveAffichage(){
 }
 
 // A chaque nouvel affichage de la page "Préférences", les données du LocalStorage devront être proposées.
+export function loadPrefAffichage(){
+    let affichage = localStorage.getItem("affichage")
+
+    if(affichage){
+        if(affichage =="liste"){
+            $('#liste').prop('checked', true)
+        } else {
+            $('#cartes').prop('checked', true)
+        }
+    }else{
+        $('#liste').prop('checked', true)
+    }
+}
+
+
+function loadPrefTheme(){
+    let theme = localStorage.getItem("theme")
+
+    if(theme){
+        $('#theme')
+            .val(theme)
+            .attr('selected')
+    }
+
+}
+
+$('#theme').change(()=>{
+    let pretheme = $('#theme').val()
+    themePage(pretheme);
+})
 export function loadPrefAffichage(){
     let affichage = localStorage.getItem("affichage")
 

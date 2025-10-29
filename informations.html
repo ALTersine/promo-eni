@@ -10,7 +10,7 @@
 <body class="container-fluid">
         <section id="page-header" class="row">
         <img src="assets/logo.png" alt="Logo de l'école ENI" id="logoEni" class="img-thumbnail  col-md-3 col-xl-2 d-none d-sm-none d-md-block">
-        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap">Promo D2WM 09-2025 <small class="text-body-secondary">(EDWM2509B)</small></h1>
+        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap"><small class="text-body-secondary"></small></h1>
 
         <span id="navigationAffichage" class="d-flex flex-row align-items-center justify-content- flex-nowrap col">
         <div class="column">
@@ -38,9 +38,11 @@
         <span class="infos">
         <h2 id="info" class="display-2">* INFORMATIONS GENERALES *</h2>
 
-        <p>Formation du <strong>29/09/2025</strong> au <strong>22/05/2026</strong></p>
+        
+        <p>Formation du <strong id="dateDebut"></strong> au <strong id="dateFin"></strong></p>
         <p>Nombre d'apprenants : <strong id="nbApprenants">0</strong></p>
         </span>
+        <p id="descriptionFormation"></p>
 
         <div id="infoDescLiens" class="row">
             <span id="desc" class="blocDescliens col-lg-12 col-xl-6">
@@ -49,15 +51,15 @@
                 <div id="blocDesc" >
                     <h6 class="titreDescLiens">Par ce qu'une image vaut 1 000 mots, découvrez la vidéo de présentation de la formation:</h6>
 
-                    <!-- <div class="videoDesc">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ia7hagQP3X4?si=N1jI54028JgqSoRh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="videoIframe"></iframe></iframe>
-                    </div> -->
+                    <video src="assets/formation_video.mp4" class="videoDesc" controls controlslist="nodownload"></video>
                 </div>
 
             </span>
 
-            <span id="liens" class="blocDescliens col-lg-12 col-xl-6">
-                <h3 id="liensUtiles" class="display-3" style="margin-left: 5%;">Liens utiles</h3>
+            <span class="col-xl-1"></span>
+
+            <span id="liens" class="blocDescliens col-lg-12 col-xl-5">
+                <h3 id="liensUtiles" class="display-3">Liens utiles</h3>
 
                 <div id="blocliens">
                     <h6 class="titreDescLiens">Le développement de ce site a été réalisé avec les liens pratiques ci-dessous (à utiliser sans hésitation) :</h6>

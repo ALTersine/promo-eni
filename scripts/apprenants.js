@@ -158,3 +158,14 @@ function modalApprenantDetail(tab){
     });
 })
 }
+
+export function nomPromo(){
+    fetch('promo.json')
+    .then(response=>response.json())
+    .then(data=>{
+        const nomPromo = data.infosPromo.nomPromo;
+        const sousnomPromo = ` <small class="text-body-secondary">${data.infosPromo.sousnom}</small>`;
+        $('#titreSite').text(nomPromo);
+        $('#titreSite').append(sousnomPromo);
+    })
+}

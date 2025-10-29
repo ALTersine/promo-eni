@@ -1,7 +1,14 @@
 import { loadPrefAffichage } from "./prefe.js";
-import { promo, listeApprenant, cartesAprrenant } from "./apprenants.js";
+import { promo, listeApprenant, cartesAprrenant, nomPromo } from "./apprenants.js";
 
 init();
+
+function init(){
+  loadPrefAffichage();
+  affichageAccueil()
+  majPrefe();
+  nomPromo()
+}
 
 function affichageAccueil(){
   const affichage = $('input[name="listeCartes"]:checked').attr('id');
@@ -31,10 +38,4 @@ function majPrefe(){
       loadPrefAffichage();
     }
   })
-}
-
-function init(){
-  loadPrefAffichage();
-  affichageAccueil()
-  majPrefe();
 }

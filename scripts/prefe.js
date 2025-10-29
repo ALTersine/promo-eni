@@ -1,4 +1,6 @@
 import { themePage } from "./theme.js";
+import { nomPromo } from "./apprenants.js";
+
 const theme = localStorage.getItem("theme")
 
 init()
@@ -7,6 +9,7 @@ function init(){
     loadPrefTheme()
     loadPrefAffichage()
     themePage(theme);
+    nomPromo()
 }
 
 //L’ensemble de ces préférences devra être stocké dans le "LocalStorage" quand on clique sur le bouton "Enregistrer".

@@ -1,4 +1,11 @@
 {
+  "infosPromo": {
+    "nomPromo": "Promo D2WM 09-2025",
+    "sousnom": "(EDWM2509B)",
+    "dateDebut": "2025-09-29",
+    "dateFin": "2026-05-22",
+    "description": "Formation destinée aux personnes débutantes passionnées par la technologie, envisageant une carrière dans le développement informatique. Plongez dans l’univers du développement avec des cours de pointe tels que la programmation orientée objet, le dev Back-End avec Java Spring Boot, Node.js, PHP et Symfony, sans oublier le Front-End avec HTML5, CSS et Javascript avec Angular ainsi qu’une multitude de projets pour mettre en pratique ses compétences. Cette formation est une opportunité unique pour se former aux technologies les plus demandées sur le marché du travail."
+  },
   "apprenants": [
     {
       "id": 1,

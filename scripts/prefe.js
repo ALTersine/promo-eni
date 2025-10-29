@@ -1,16 +1,21 @@
-import { loadPrefAffichage, loadPrefTheme } from "./scripts.js";
-/**
- * Prévoir d'exporter la function qui afficher le bonne préf de tableau
- * Puis importer cette function dans le fichier accueil.js
- */
+import { themePage } from "./theme.js";
+import { nomPromo } from "./apprenants.js";
+
+const theme = localStorage.getItem("theme")
 
 init()
 
-//L’ensemble de ces préférences devra être stocké dans le "LocalStorage" quand on clique sur le bouton "Enregistrer".
+function init(){
+    loadPrefTheme()
+    loadPrefAffichage()
+    themePage(theme);
+    nomPromo()
+}
 
+//L’ensemble de ces préférences devra être stocké dans le "LocalStorage" quand on clique sur le bouton "Enregistrer".
 $('#savePref').click(()=>{
     saveTheme();
-    saveAffichage()   
+    saveAffichage()
 
     alert(`Merci, votre thème a été sauvegardé en ${saveTheme()} et la liste des apprenants en affichage de type ${saveAffichage() }`)
 
@@ -31,7 +36,33 @@ function saveAffichage(){
 }
 
 // A chaque nouvel affichage de la page "Préférences", les données du LocalStorage devront être proposées.
-function init(){
-    loadPrefTheme()
-    loadPrefAffichage()
+export function loadPrefAffichage(){
+    let affichage = localStorage.getItem("affichage")
+
+    if(affichage){
+        if(affichage =="liste"){
+            $('#liste').prop('checked', true)
+        } else {
+            $('#cartes').prop('checked', true)
+        }
+    }else{
+        $('#liste').prop('checked', true)
+    }
 }
+
+
+function loadPrefTheme(){
+    let theme = localStorage.getItem("theme")
+
+    if(theme){
+        $('#theme')
+            .val(theme)
+            .attr('selected')
+    }
+
+}
+
+$('#theme').change(()=>{
+    let pretheme = $('#theme').val()
+    themePage(pretheme);
+})

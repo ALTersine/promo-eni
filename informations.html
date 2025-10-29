@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page d'informations - Promo-eni</title>
+    <title>Page d'information - Promo-eni</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="container-fluid">
         <section id="page-header" class="row">
         <img src="assets/logo.png" alt="Logo de l'école ENI" id="logoEni" class="img-thumbnail  col-md-3 col-xl-2 d-none d-sm-none d-md-block">
-        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap">Promo D2WM 09-2025 <small class="text-body-secondary">(EDWM2509B)</small></h1>
+        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap"><small class="text-body-secondary"></small></h1>
 
         <span id="navigationAffichage" class="d-flex flex-row align-items-center justify-content- flex-nowrap col">
         <div class="column">
@@ -38,9 +38,11 @@
         <span class="infos">
         <h2 id="info" class="display-2">* INFORMATIONS GENERALES *</h2>
 
-        <p>Formation du <strong>29/09/2025</strong> au <strong>22/05/2026</strong></p>
+        
+        <p>Formation du <strong id="dateDebut"></strong> au <strong id="dateFin"></strong></p>
         <p>Nombre d'apprenants : <strong id="nbApprenants">0</strong></p>
         </span>
+        <p id="descriptionFormation"></p>
 
         <div id="infoDescLiens" class="row">
             <span id="desc" class="blocDescliens col-lg-12 col-xl-6">
@@ -56,8 +58,10 @@
 
             </span>
 
-            <span id="liens" class="blocDescliens col-lg-12 col-xl-6">
-                <h3 id="liensUtiles" class="display-3" style="margin-left: 5%;">Liens utiles</h3>
+            <span class="col-xl-1"></span>
+
+            <span id="liens" class="blocDescliens col-lg-12 col-xl-5">
+                <h3 id="liensUtiles" class="display-3">Liens utiles</h3>
 
                 <div id="blocliens">
                     <h6 class="titreDescLiens">Le développement de ce site a été réalisé avec les liens pratiques ci-dessous (à utiliser sans hésitation) :</h6>
@@ -88,5 +92,7 @@
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script type="module" src="scripts/theme.js" defer></script>
+<script type="module" src="scripts/information.js" defer></script>
 </html>

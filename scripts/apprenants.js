@@ -1,5 +1,4 @@
 //traitement des données liés aux apprenants
-//traitement des données liés aux apprenants
 export function promo(cbAffichage){
 fetch('promo.json')
     .then(response=>response.json())
@@ -12,8 +11,6 @@ fetch('promo.json')
         }))
 
         cbAffichage(infoAccueil)
-
-        modalApprenantDetail(data.apprenants)
 
         modalApprenantDetail(data.apprenants)
     })
@@ -35,13 +32,11 @@ export function listeApprenant(tab){
         $('<td></td>').text(apprenant.prenom).appendTo($tr)
         $('<td></td>').text(apprenant.ville).appendTo($tr)
         $('<td></td>').html(`<button type="button" class="btn btn-outline-info" id="detail_${apprenant.id}" data-bs-toggle="modal" data-bs-target="#detailModal${apprenant.id}">Détail</button>`).appendTo($tr)
-        $('<td></td>').html(`<button type="button" class="btn btn-outline-info" id="detail_${apprenant.id}" data-bs-toggle="modal" data-bs-target="#detailModal${apprenant.id}">Détail</button>`).appendTo($tr)
 
         $tbody.append($tr);
     })
 }
 
-//affichage en cartes
 //affichage en cartes
 export function cartesAprrenant(tab){
     $('#titreTableau').text("Carte des apprenants")
@@ -59,7 +54,6 @@ export function cartesAprrenant(tab){
                 <div class="card-body" style="text-align: center;">
                     <h5 class="card-title" id="carteTitre">${apprenant.id} ${apprenant.nom} ${apprenant.prenom}</h5>
                     <p class="card-text" id="carteInfo">${apprenant.ville}</p>
-                    <button type="button" class="btn btn-outline-info" id="detail_${apprenant.id}" data-bs-toggle="modal" data-bs-target="#detailModal${apprenant.id}">Détail</button>
                     <button type="button" class="btn btn-outline-info" id="detail_${apprenant.id}" data-bs-toggle="modal" data-bs-target="#detailModal${apprenant.id}">Détail</button>
                 </div>
                 </div>
@@ -163,15 +157,4 @@ function modalApprenantDetail(tab){
         $(`#modal_${apprenant.id}`).focus()
     });
 })
-}
-
-export function nomPromo(){
-    fetch('promo.json')
-    .then(response=>response.json())
-    .then(data=>{
-        const nomPromo = data.infosPromo.nomPromo;
-        const sousnomPromo = ` <small class="text-body-secondary">${data.infosPromo.sousnom}</small>`;
-        $('#titreSite').text(nomPromo);
-        $('#titreSite').append(sousnomPromo);
-    })
 }

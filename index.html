@@ -9,55 +9,7 @@
 </head>
 <body class="container-fluid">
     <section id="page-header" class="row">
-        <img src="assets/logo.png" alt="Logo de l'école ENI" id="logoEni" class="img-thumbnail  col-md-3 col-xl-2 d-none d-sm-none d-md-block">
-        <h1 id="titreSite" class="display-1 col-md-8 col-xl-6 flex-row align-self-center justify-content-evenly flex-wrap"><small class="text-body-secondary"></small></h1>
-
-        <span id="navigationAffichage" class="d-flex flex-row align-items-center justify-content- flex-nowrap col">
-        <!-- Menu en ligne -->
-        <div class="column">
-            <nav id="largeMediaNavigate" class="navbar">
-                <!--Gestion des menus responsive
-                <div id="navbarToggleExternalContent" class="collapse">-->
-            <div class="container-fluid">
-                <ul class="nav nav-underline">
-                <li class="nav-item">
-                    <a href="index.html" id="homeNavigate" class="nav-link active" aria-current="page">Accueil</a>
-                </li>
-                <li class="nav-item">
-                    <a href="preferences.html" id="prefNavigate" class="nav-link">Préférences</a>
-                </li>
-                <li class="nav-item">
-                    <a href="carte.html" id="mapNavigate" class="nav-link">Carte</a>
-                </li>
-                <li class="nav-item">
-                    <a href="informations.html" id="infoNavigate" class="nav-link">Informations</a>
-                </li>
-                </ul>
-            </div>
-                <!-- </div> -->
-            </nav>
-            <!-- Menu burger -->
-            <!-- <nav class="navbar" id="smallMediaNavigate">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-            </nav> -->
-        
-        <fieldset id="affichageListeCartes">
-            <legend class="d-flex justify-content-center align-items-center">Type affichage</legend>
-                <div class="form-check form-check-inline">
-                    <input type="radio" name="listeCartes" id="liste" class="form-check-input">
-                    <label for="liste" class="form-check-label">Liste</label>
-                </div>
-                <div class="form-check form-check-inline">
-                    <input type="radio" name="listeCartes" id="cartes" class="form-check-input">
-                    <label for="cartes" class="form-check-label">Cartes</label>
-                </div>
-        </fieldset>
-        </div>
-        </span>
+        <!-- injection en JS du header par generatePage -->
     </section>
 
     <section id="tableauApprenants" class="column">
@@ -107,6 +59,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script type="module" src="scripts/accueil.js" defer></script>
-<script type="module" src="scripts/theme.js" defer></script>
+<script type="module" src="scripts/index.js" defer></script>
 </html>

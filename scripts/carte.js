@@ -1,6 +1,7 @@
-import { mapping, nomPromo } from "./apprenants.js";
+import { mapping } from "./apprenants.js";
+import { generatePage } from "./layoutPage.js";
 
-nomPromo();
+generatePage("carte")
 
 const carte = L.map('carteLocalisation').setView([47.216671, -1.55], 13);
 

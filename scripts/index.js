@@ -1,13 +1,13 @@
-import { loadPrefAffichage } from "./prefe.js";
-import { promo, listeApprenant, cartesAprrenant, nomPromo } from "./apprenants.js";
+import { generatePage, loadPrefAffichage } from "./layoutPage.js";
+import { promo, listeApprenant, cartesAprrenant } from "./apprenants.js";
 
-init();
+generatePage("accueil")
+init()
 
 function init(){
   loadPrefAffichage();
   affichageAccueil()
   majPrefe();
-  nomPromo()
 }
 
 function affichageAccueil(){

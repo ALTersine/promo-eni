@@ -1,11 +1,11 @@
-import { nomPromo } from "./apprenants.js";
+import { generatePage } from "./layoutPage.js";
 
+generatePage("informations")
 init();
 
 function init(){
     totalApprenants()
     infoPromo()
-    nomPromo()
 }
 
 function totalApprenants(){

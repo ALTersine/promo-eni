@@ -3,6 +3,15 @@ body{
     flex-direction: column;
 }
 
+.header_img{
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
 h1{
     text-align: center;
 }

@@ -21,21 +21,79 @@
     </p>
 
     <section id="gestionCarte" class="main_carte">
-        <fieldset id="filtreLocalisation" class="main_fieldset">
+        <fieldset id="filtreAll" class="main_fieldset-carte">
             <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="affichageTouteLocalisation" checked>
                 <label class="form-check-label" for="affichageTouteLocalisation">Tout afficher sur la carte</label>
             </div>
         </fieldset>
+        <fieldset id="filtreDetail" class="main_fieldset-carte">
+            <div id="affichageNull" class="form-check">  
+                <input type="radio" name="affichageDetailedlocalisation" id="carteVide" value="vide" class="form-check-input" checked>
+                <label for="carteVide" class="form-check-label fieldset_label">Ne rien afficher</label>
+            </div>
+            <div id="affichageApprenant" class="form-check fieldset_label">  
+                <input type="radio" name="affichageDetailedlocalisation" id="carteApprenants" value="apprenants" class="form-check-input">
+                <label for="carteApprenants" class="form-check-label fieldset_label">Afficher que les apprenants</label>
+            </div>
+            <div id="affichageApprenant" class="form-check">
+                <input type="radio" name="affichageDetailedlocalisation" id="carteBars" value="bars" class="form-check-input">
+                <label for="carteBars" class="form-check-label fieldset_label">Afficher que les bars</label>
+            </div>
+        </fieldset>
+    </section>
 
+    <section id="carte" class="main_carte">
         <span class="map"></span>
             <div id="carteLocalisation" class="map_display"></div>
         </span>
     </section>
 
-    <fieldset id="affichageBoutons" style="margin-bottom: 5%;" class="d-flex justify-content-around">
-        <button type="button" class="btn btn-secondary"><a href="index.html">Retour à la page d'Accueil</a></button>
-    </fieldset>
+    <section id="envoiInvitation">
+        <fieldset class="container-fluid fieldset_form">
+
+            <legend class="form_legend">Faites connaissance en partageant une invitation à un ou plusieurs apprenants de la promo !</legend>
+
+            <form action="" method="post" class="row d-flex justify-content-center">
+
+                <div class="col-3">
+                    <label for="nomPrenomEmetteur" class="form-label">Votre Nom et prénom</label>
+                    <input type="text" class="form-control" id="nomPrenomEmetteur" placeholder="Indiquez votre nom et prénom">
+                </div>
+
+                <div class="col-3">
+                    <label for="coordonneesEmetteur" class="form-label">Vos coordonées qu'on puisse vous recontacter</label>
+                    <input type="text" class="form-control" id="coordonneesEmetteur" placeholder="Indiquez par exemple votre numéro de téléphone">
+                </div>
+
+                <div class="col-3">
+                    <label for="nomPrenomDestinataire" class="form-label">Qui souhaitez-vous contacter ?</label>
+                    <input class="form-control" list="nomApprenant" id="destinataireInvitation" placeholder="Recherchez un étudiant ici">
+                        <datalist id="nomApprenant">
+                        <option value=""">
+                    </datalist>
+                </div>
+
+                <div class="col-3">
+                    <label for="lieuInvitation" class="form-label">Où souhaitez-vous vous rencontrer ?</label>
+                    <input class="form-control" list="nomBar" id="lieuInvitation" placeholder="Recherchez un lieu ici">
+                        <datalist id="nomBar">
+                        <option value=""">
+                    </datalist>
+                </div>
+
+                <div class="input-group col-12 form_element">
+                    <span class="input-group-text">Voici votre message</span>
+                    <textarea class="form-control" name="invitation" id="msgInvitation"></textarea>
+                </div>
+
+                <div class="input-group d-flex justify-content-center">
+                    <button type="submit" class="col-2 btn btn-primary form_element">Envoyer l'invitation</button>
+                    <button type="button" class="col-2 btn btn-secondary form_element"><a href="index.html">Retour à la page d'Accueil</a></button>
+                </div>
+            </form>
+        </fieldset>
+    </section>
     
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>

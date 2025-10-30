@@ -1,6 +1,6 @@
 //traitement des données liés aux apprenants
 export function promo(cbAffichage){
-fetch('promo.json')
+fetch('database/promo.json')
     .then(response=>response.json())
     .then(data=>{
         const infoAccueil = data.apprenants.map(apprenant=>({
@@ -64,7 +64,7 @@ export function cartesAprrenant(tab){
 
 //traitement des données pour la carte
 export function mapping(cbLocalisation){
-fetch('promo.json')
+fetch('database/promo.json')
     .then(response=>response.json())
     .then(data=>{
         const infoCarte = data.apprenants.map(apprenant=>({

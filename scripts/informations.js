@@ -9,7 +9,7 @@ function init(){
 }
 
 function totalApprenants(){
-    fetch('promo.json')
+    fetch('database/promo.json')
     .then(response=>response.json())
     .then(data=>{
         const nbApprenants = data.apprenants.length;
@@ -18,7 +18,7 @@ function totalApprenants(){
 }
 
 function infoPromo(){
-    fetch('promo.json')
+    fetch('database/promo.json')
     .then(response=>response.json())
     .then(data=>{
         const description = data.infosPromo.description;

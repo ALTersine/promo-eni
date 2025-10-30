@@ -17,10 +17,21 @@
     </section>
 
     <h2 id="pref" class="display-2 d-flex justify-content-center">Carte</h2>
+    <p class="intro_paragraphe">Bienvenue dans la carte de la promo. Découvrez la localisation de tous les apprenants et des bars dans leur secteur.<br> Vous pouvez choisir d'afficher que les apprenants ou que les bars.<br> Rendez-vous ensuite en bas de page pour planifier un moment de rencontre avec les étudiants.
+    </p>
 
-    <span class="map">
-        <div id="carteLocalisation" class="map_display"></div>
-    </span>
+    <section id="gestionCarte" class="main_carte">
+        <fieldset id="filtreLocalisation" class="main_fieldset">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" role="switch" id="affichageTouteLocalisation" checked>
+                <label class="form-check-label" for="affichageTouteLocalisation">Tout afficher sur la carte</label>
+            </div>
+        </fieldset>
+
+        <span class="map"></span>
+            <div id="carteLocalisation" class="map_display"></div>
+        </span>
+    </section>
 
     <fieldset id="affichageBoutons" style="margin-bottom: 5%;" class="d-flex justify-content-around">
         <button type="button" class="btn btn-secondary"><a href="index.html">Retour à la page d'Accueil</a></button>

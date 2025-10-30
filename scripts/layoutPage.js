@@ -8,7 +8,7 @@ export function generatePage(pageName){
 }
 
 function nomPromo(){
-    fetch('promo.json')
+    fetch('database/promo.json')
     .then(response=>response.json())
     .then(data=>{
         const nomPromo = data.infosPromo.nomPromo;

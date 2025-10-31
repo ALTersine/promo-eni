@@ -65,9 +65,9 @@ h2{
     margin-bottom: 2%;
 }
 
-.form_element{
-    max-width: 100%;
-    margin: 2% 1% 2px 1% ;
+.form_button{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -120,9 +120,9 @@ button a{
 
 .main_carte{
     margin-top: 3%; 
+    margin-left:2%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -154,4 +154,18 @@ button a{
     border-radius: 7px;
     height: 10vh;
     text-align: center;
+}
+
+@media screen and (width<1025px){
+    .form_element{
+    width: 100%;
+    margin: 2% 1% 2px 1% ;
+    }
+}
+
+@media screen and (width>=1025px){
+    .form_element{
+    max-width: 100%;
+    margin: 2% 1% 2px 1% ;
+    }
 }

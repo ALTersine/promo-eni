@@ -2,6 +2,8 @@ import { mapping } from "./apprenants.js";
 import { generatePage } from "./layoutPage.js";
 
 const carte = L.map('carteLocalisation').setView([47.216671, -1.55], 8);
+const escape = (str) => str.replace(/[&<>"]/g, (m) => ({ '&': '&amp;', '<':'&lt;', '>': '&gt;', '"': '&quot;', "'":'&#39;'}[m]))
+const msgAlert = "Une tentative d'injection HTML a été détectée. Merci de corriger votre saisie."
 let apprenants = []
 let bars = []
 let checked = 0
@@ -28,6 +30,12 @@ function init(){
     //Evenemnts du fieldset Filtre Localisation
     checkChoice()
     checkAll(checkChoice)
+
+    //Evenement du form
+    secuInjectionHTML()
+    validationFormulaire()
+    autoFillForm('.invit-apprenant', '#destinataireInvitation')
+    autoFillForm('.invit-lieu', '#lieuInvitation')
 }
 
 //fonctions liées aux apprenants
@@ -37,7 +45,7 @@ function marqueurApprenant(tab){
             closeOnClick:false
         })
             .setLatLng([apprenant.latitude, apprenant.longitude],)
-            .setContent(`${apprenant.nom_complet} est entrain d'apprendre le développement web ici.`)
+            .setContent(`${apprenant.nom_complet} est entrain d'apprendre le développement web ici. <br> <button type="button" class="btn btn-primary btn-sm mt-2 invit-apprenant" id="${apprenant.nom_complet}">Inviter</button>`)
             .openOn(carte);
             
         apprenants.push(infos);
@@ -67,13 +75,15 @@ function marqueurBar(){
                 longitude: feature.geometry.coordinates[0]
         }))
         features.forEach(BarProp=>{
-        const localisation = L.circle([BarProp.lattitude, BarProp.longitude], {
-            color: 'blue',
-            fillColor: 'rgba(0, 38, 255, 0.36)',
-            fillOpacity: 0.5,
-            radius: 50,
-        }).bindPopup(`Rendez-vous au ${BarProp.nom_complet}`)
-        bars.push(localisation)
+            if(BarProp.nom_complet != undefined){
+                const localisation = L.circle([BarProp.lattitude, BarProp.longitude], {
+                    color: 'blue',
+                    fillColor: 'rgba(0, 38, 255, 0.36)',
+                    fillOpacity: 0.5,
+                    radius: 50,
+                }).bindPopup(`Rendez-vous au ${BarProp.nom_complet} <br> <button type="button" class="btn btn-primary btn-sm mt-2 invit-lieu" id="${BarProp.nom_complet}">C'est parti !</button>`);
+                bars.push(localisation)
+            }
     })
     afficherBars()
     formulaireRecherche("#nomBar",features)
@@ -91,7 +101,7 @@ function retirerBars(){
     } 
 }
         
-//Fonctions du fieldset
+//Fonctions de filtre
 function checkAll(cb){
     $('#affichageTouteLocalisation').change(()=>{
         if(checked==0){
@@ -128,9 +138,61 @@ function checkChoice(){
     }
 }
 
+//Fonctions de l'invitation
 function formulaireRecherche(barRecherche,tab){
     tab.forEach(info=>{
         const option = $(`<option value="${info.nom_complet}">`)
         $(barRecherche).append(option)
+    })
+}
+
+function secuInjectionHTML(){
+    $('input, textarea').on('input', function () {
+    const val = $(this).val();
+    const escaped = escape(val);
+
+    if (val !== escaped) {
+      alert(msgAlert);
+      $('button[type="submit"]').prop('disabled', true);
+    } else {
+      $('button[type="submit"]').prop('disabled', false);
+    }
+  });
+}
+
+function validationFormulaire(){
+    $('form').submit(function (e){
+        e.preventDefault()
+
+        let isSafe = true;
+        
+        $(this)
+            .find('input, textarea')
+            .each (function (){
+                const val = $(this).val();
+                const escaped = escape(val);
+
+                if (val !== escaped){
+                    isSafe = false
+                }               
+            })
+
+        if(!isSafe){
+            alert(msgAlert)
+        } else{
+            alert ("Votre invitation vient d'être envoyée, merci !")
+            $(this).find('input, textarea').val('')
+        }
+    })
+}
+
+function autoFillForm(entree, sorti){
+    $(document).on('click', entree, function(){
+        const completion = $(this).attr('id')
+        $(sorti).val(completion)
+        
+        if (confirm(`Super, on vient de rajouter "${completion}" dans le formulaire d'invitation. Cliquez sur "Ok" pour vous y rendre`)){
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        }
     })
 }

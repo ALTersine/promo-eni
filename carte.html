@@ -57,8 +57,8 @@
             <form action="" method="post" class="row d-flex justify-content-center">
 
                 <div class="col-3">
-                    <label for="nomPrenomEmetteur" class="form-label">Votre Nom et prénom</label>
-                    <input type="text" class="form-control" id="nomPrenomEmetteur" placeholder="Indiquez votre nom et prénom">
+                    <label for="nomPrenomEmetteur" class="form-label">Votre Nom et prénom <span style="color: red;">*</span></label>
+                    <input type="text" class="form-control" id="nomPrenomEmetteur" placeholder="Indiquez votre nom et prénom" required >
                 </div>
 
                 <div class="col-3">
@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="col-3">
-                    <label for="nomPrenomDestinataire" class="form-label">Qui souhaitez-vous contacter ?</label>
+                    <label for="destinataireInvitation" class="form-label">Qui souhaitez-vous contacter ?</label>
                     <input class="form-control" list="nomApprenant" id="destinataireInvitation" placeholder="Recherchez un étudiant ici">
                         <datalist id="nomApprenant">
                         <option value=""">
@@ -83,7 +83,7 @@
                 </div>
 
                 <div class="input-group col-12 form_element">
-                    <span class="input-group-text">Voici votre message</span>
+                    <span class="input-group-text">Ecrivez un petit message</span>
                     <textarea class="form-control" name="invitation" id="msgInvitation"></textarea>
                 </div>
 
